@@ -1,0 +1,13 @@
+# Homework folder
+HW_Week1_FDE_PhamHoangVinh/
+
+# Create when run docker
+minio/
+mysql_data/
+postgres_data/
+
+# Data
+data/
+
+# Others
+*.zip
