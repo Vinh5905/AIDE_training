@@ -3,7 +3,9 @@ HW_Week1_FDE_PhamHoangVinh/
 
 # Create when run docker
 minio/
+mysql/
 mysql_data/
+postgresql/
 postgres_data/
 
 # Data

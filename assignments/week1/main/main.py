@@ -40,8 +40,8 @@ type_map = {
 }
 
 # Folder path data
-data_folder = "./assignments/week1/data/"
-data_download_folder = './assignments/week1/data_download/'
+data_folder = "./data/"
+data_download_folder = './data_download/'
 folders = [
     data_folder,
     data_download_folder
