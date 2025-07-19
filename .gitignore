@@ -1,5 +1,5 @@
 # Homework folder
-HW_Week1_FDE_PhamHoangVinh/
+HW_Week*
 
 # Create when run docker
 minio/
@@ -8,8 +8,12 @@ mysql_data/
 postgresql/
 postgres_data/
 
+# Dagster when run
+.tmp_dagster*
+
 # Data
 data/
 
 # Others
 *.zip
+__pycache__/

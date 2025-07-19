@@ -2,3 +2,9 @@ numpy
 pandas
 minio
 pyarrow
+dagster
+dagster-webserver
+SQLAlchemy
+pymysql
+cryptography
+psycopg2
