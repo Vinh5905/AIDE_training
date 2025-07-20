@@ -10,16 +10,16 @@ import pandas as pd
             key_prefix=['silver', 'ecom']
         )
     },
-    io_manager_key='psql_io_manager',
-    key_prefix=['gold'],
+    io_manager_key='minio_io_manager',
+    key_prefix=['gold', 'ecom'],
     group_name='gold',
-    compute_kind='postgresql'
+    compute_kind='minio'
 )
 def sales_values_by_category(
     context: AssetExecutionContext,
     fact_sales: pd.DataFrame,
     dim_products: pd.DataFrame
-):
+) -> Output[pd.DataFrame]:
     # Convert order_purchase_timestamp to proper datetime format
     fact_sales["order_purchase_timestamp"] = pd.to_datetime(fact_sales["order_purchase_timestamp"])
 

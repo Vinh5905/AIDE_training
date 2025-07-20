@@ -2,6 +2,7 @@ from dagster import Definitions
 from assets.bronze_layer import olist_order_items_dataset, olist_order_payments_dataset, olist_orders_dataset, olist_products_dataset, product_category_name_translation
 from assets.silver_layer import dim_products, fact_sales
 from assets.gold_layer import sales_values_by_category
+from assets.warehouse import sales_values_by_category as warehouse_sales_values_by_category
 from resources.minio_io_manager import MinIOIOManager
 from resources.mysql_io_manager import MySQLIOManager
 from resources.psql_io_manager import PostgreSQLIOManager
@@ -38,7 +39,8 @@ defs = Definitions(
         product_category_name_translation,
         dim_products,
         fact_sales,
-        sales_values_by_category
+        sales_values_by_category,
+        warehouse_sales_values_by_category
     ],
     resources={
         "minio_io_manager": MinIOIOManager(MINIO_CONFIG),
