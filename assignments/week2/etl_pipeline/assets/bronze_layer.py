@@ -1,4 +1,4 @@
-from dagster import asset, OutputContext, Output
+from dagster import asset, OutputContext, Output, AssetExecutionContext
 import pandas as pd
 from resources.mysql_io_manager import MySQLIOManager
 
@@ -20,7 +20,7 @@ def create_bronze_asset(table_name):
         group_name='bronze',
         io_manager_key='minio_io_manager'
     )
-    def bronze_asset(context: OutputContext) -> Output[pd.DataFrame]:
+    def bronze_asset(context: AssetExecutionContext) -> Output[pd.DataFrame]:
         sql_request = f'SELECT * FROM {table_name}'
         pd_data = context.resources.mysql_io_manager.extract_data(sql_request)
         context.log.warning(f'Extracted {len(pd_data)} rows successfully from {table_name}!!')

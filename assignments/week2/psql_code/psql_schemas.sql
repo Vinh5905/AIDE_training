@@ -1,3 +1,5 @@
+--------------------------------- TABLE DATA BRONZE ---------------------------------
+
 DROP TABLE IF EXISTS public.product_category_name_translation CASCADE;
 CREATE TABLE public.product_category_name_translation (
     product_category_name text PRIMARY KEY,
@@ -53,4 +55,18 @@ CREATE TABLE public.olist_order_payments_dataset (
     payment_installments integer,
     payment_value real,
     PRIMARY KEY (order_id, payment_sequential)
+);
+
+
+--------------------------------- TABLE DATA GOLD ---------------------------------
+
+CREATE SCHEMA IF NOT EXISTS gold;
+
+DROP TABLE IF EXISTS gold.sales_values_by_category CASCADE;
+CREATE TABLE gold.sales_values_by_category (
+    monthly text,
+    category text,
+    sales float8,
+    bills int8,
+    values_per_bill float8
 );
