@@ -4,6 +4,7 @@ minio
 pyarrow
 dagster
 dagster-webserver
+dagit
 SQLAlchemy
 pymysql
 cryptography

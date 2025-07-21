@@ -8,8 +8,15 @@ mysql_data/
 postgresql/
 postgres_data/
 
-# Dagster when run
+# Dagster when run dev
 .tmp_dagster*
+
+# Dagster when run local
+.logs_queue/
+.nux/
+.telemetry/
+history/
+schedules/
 
 # Data
 data/

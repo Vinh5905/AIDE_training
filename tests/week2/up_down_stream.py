@@ -1,6 +1,6 @@
 from dagster import AssetIn, Definitions, asset
 import pandas as pd
-from dagster_test_csv_io_manager import CSVIOManager
+from tests.week2.csv_io_manager import CSVIOManager
 
 @asset(
     name='my_2nd_asset', # set name
